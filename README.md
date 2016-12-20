@@ -20,9 +20,13 @@ npm install
 All code that is used for development is in the 'src' folder. There we have 2 main folders:
 
 *   CustomComponents
-...Items in this folder will go through the build process
+
+ Items in this folder will go through the build process
+
 *   VendorComponents
-...Components that you get online, which you want to make a reference to will be placed here. See [Pre Build](#pre-build).
+
+ Components that you get online, which you want to make a reference to will be placed here. See [Pre Build](#pre-build).
+ 
 ## Pre Build
 Run `gulp copy-VendorComponents`
 This task copies items from src/VendorComponents to dist/VendorComponents
