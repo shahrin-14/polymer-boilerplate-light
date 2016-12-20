@@ -21,6 +21,14 @@ gulp.task('cleanCopy',['clean'],function(){
         .pipe(gulp.dest('dist'));
 })
 
+gulp.task('copy-VendorComponents',function(){
+    //This will copy anything in the src folder except for CustomComponents folder and VendorComponents folder
+    //The custom components will be built by Babel
+    return gulp.src(['src/VendorComponents/**/*'])
+        .pipe(tap(function(file,t) { console.log(file.path) }))
+        .pipe(gulp.dest('dist/VendorComponents'));
+})
+
 gulp.task('crisper',['cleanCopy'], function() {
   return gulp.src('src/CustomComponents/*.html')
     .pipe(tap(function(file,t) { console.log(file.path) }))
